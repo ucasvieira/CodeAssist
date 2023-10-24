@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Lilita+One&family=Poppins:wght@300&family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+  }
+  
+.grid{
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+}
+
+.textlogin{
+    color: #8E05C2;
+    font-family: 'Lilita One', sans-serif;
+    align-items: center;
+    size: 30cap;
+    margin-left: 1.5rem;
+    width: 390px;
+    display: flex;
+}
+
+.textologin h1{
+    font-size: 100px;
+}
+
+.box-img-main{
+    max-width: 700px;
+    padding: 1rem;
+  }
+  
+  .img-login{
+    border-radius: 40%;
+    width: 550px;
+    animation: float 3s ease-in-out infinite;
+    max-width: 100%;
+  }
+  
+  @keyframes float {
+    0%, 100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+  }
+
+  .img-cadastro{
+    border-radius: 40%;
+    width: 550px;
+    animation: float 3s ease-in-out infinite;
+    max-width: 100%;
+    margin-top: 10%;
+  }
+  
+  @keyframes float {
+    0%, 100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+  }
+
+
+
+.textcadastro{
+    color: #8E05C2;
+    font-family: 'Lilita One', sans-serif;
+    align-items: center;
+    size: 30cap;
+    margin-left: 2.5rem;
+    width: 390px;
+    display: flex;
+}
+
