@@ -1,0 +1,62 @@
+.btnpomodoro{
+    color: white;
+    background-color: #8E05C2;
+    border: 1px solid transparent;
+    padding: 19px 153px;
+    border-radius: 13px;
+    font-size: 30px;
+    transition: transform 0.3s;
+    transition: all 0.5s ease;
+}
+
+.btnpomodoro:hover{
+    color: #8E05C2;
+    background-color: white;
+    transform: translateX(5px);
+}
+
+
+.btnpausacurta{
+    color: white;
+    background-color: #8E05C2;
+    border: 1px solid transparent;
+    padding: 19px 140px;
+    border-radius: 13px;
+    font-size: 30px;
+    transition: transform 0.3s;
+    transition: all 0.5s ease;
+}
+
+.btnpausacurta:hover{
+    color: #8E05C2;
+    background-color: white;
+    transform: translateX(5px);
+}
+
+
+.btnpausalonga{
+    color: white;
+    background-color: #8E05C2;
+    border: 1px solid transparent;
+    padding: 19px 135px;
+    border-radius: 13px;
+    font-size: 30px;
+    transition: transform 0.3s;
+    transition: all 0.5s ease;
+}
+
+.btnpausalonga:hover{
+    color: #8E05C2;
+    background-color: white;
+    transform: translateX(5px);
+}
+
+#start-icon{
+    font-size: 50px;
+    transition: transform 0.3s;
+    transition: all 0.1s ease;
+}
+
+#start-icon:hover{
+    transform: scale(0.90);
+}
