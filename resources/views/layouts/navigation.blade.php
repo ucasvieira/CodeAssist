@@ -4,12 +4,9 @@
       <a class="text-2xl font-bold" href="/">
         <img src="{{ asset('images/logo code assist final.png') }}" alt="Logo" width="200px" id="logo-final"/>
       </a>
-      <button class="lg:hidden block text-branco">
-        <i class="fas fa-bars" id=oi></i>
-      </button>
     <div class="navbarsemlogo">
       <div class="hidden lg:flex space-x-6">
-        <a class="hover:text-maincolor-100" href="{{ url('/blococodigo') }}">Salvar Códigos</a>
+        <a class="hover:text-maincolor-100 " href="{{ url('/blococodigo') }}">Salvar Códigos</a>
         <a class="hover:text-maincolor-100" href="{{ url('/tarefa') }}">Lista de Tarefas</a>
         <a class="hover:text-maincolor-100" href="{{ url('/pomodoro') }}">Pomodoro</a>
         <a class="hover:text-maincolor-100" href="{{ url('/materiais') }}">Salvar Materiais</a>
