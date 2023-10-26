@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#check{
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#trash{
+    font-size: 23px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.containertarefa{
+    background-color: #C1C1C1;
+    width: 500px;
+    border-radius: 15px;
+    padding: 20px; /*espaçamento interno*/
+    margin: 100px auto 0; /*margin left e right no automatico deixa o item no centro*/
+}
+
+.input-task {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.button-add-task{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right; /*jogando o botão para a direita*/
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+}
+
+.button-add-task:hover{
+    opacity: 0.7;
+}
+
+.button-add-task:active{
+    background-color: #520E6C;
+    opacity: 1;
+}
+
+.list-tasks{
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task{
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0,0,0,0.2);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.task:hover #check{
+    opacity: 1;
+}
+
+.task:hover #trash{
+    opacity: 1;
+}
+
+.done{
+    background-color: #8fac55;
+}
+
+.done .itemtarefa{
+    text-decoration: line-through;
+}
+

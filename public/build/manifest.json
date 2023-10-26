@@ -1,0 +1,22 @@
+{
+  "node_modules/bootstrap/dist/css/bootstrap.min.css": {
+    "file": "assets/bootstrap.min-7e4a3f64.css",
+    "isEntry": true,
+    "src": "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  },
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry": {
+    "file": "assets/bootstrap.bundle-8f21a554.js",
+    "isEntry": true,
+    "src": "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-9991322a.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-3e5e0598.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
