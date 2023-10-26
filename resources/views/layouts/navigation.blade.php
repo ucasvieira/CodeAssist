@@ -5,7 +5,7 @@
         <img src="{{ asset('images/logo code assist final.png') }}" alt="Logo" width="200px" id="logo-final"/>
       </a>
     <div class="navbarsemlogo">
-      <div class="hidden lg:flex space-x-6">
+      <div class="flex space-x-6">
         <a class="hover:text-maincolor-100 " href="{{ url('/blococodigo') }}">Salvar Códigos</a>
         <a class="hover:text-maincolor-100" href="{{ url('/tarefa') }}">Lista de Tarefas</a>
         <a class="hover:text-maincolor-100" href="{{ url('/pomodoro') }}">Pomodoro</a>
