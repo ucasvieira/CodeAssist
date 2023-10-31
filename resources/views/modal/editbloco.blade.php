@@ -37,11 +37,11 @@
         styleActiveSelected: true,
         theme: "dracula",
         scrollbarStyle: "overlay",
-        mode: "', $modulo->linguagem, '"
+        mode: "', $modulo->linguagem,'"
     });
     
     editEditor', $bloco->id, '.setSize(null,null);
-    editEditor', $bloco->id, '.
+    
     // Adicione um ouvinte de evento de clique ao botão
     botaoCopiar.addEventListener("click", function() {
     // Usando a Clipboard API para copiar o texto

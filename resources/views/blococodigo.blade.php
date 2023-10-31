@@ -27,8 +27,13 @@
 
                     @foreach ($modulo->blocos as $bloco)
                     <div class="w-[19vw]  rounded-3xl h-20">
-                        <button data-modal-target="previewBlocoModal-{{ $bloco->id }}" data-modal-toggle="previewBlocoModal-{{ $bloco->id }}" class="w-1/2 bg-maincolor-100 rounded h-20">
+                        <button data-modal-target="previewBlocoModal-{{ $bloco->id }}" data-modal-toggle="previewBlocoModal-{{ $bloco->id }}" onclick="focusInput()" class="w-1/2 bg-maincolor-100 rounded h-20">
                             <p class="whitespace-pre-line truncate w-full text-white">{{ $bloco->nome }}</p>
+                            <script>
+                               <?echo' function focusInput() {
+                                    document.getElementById("editCode-',$bloco->id,'").focus();
+                                }'?>
+                            </script>
                         </button>
                         @include('modal.editbloco', ['bloco' => $bloco])
                     </div>
@@ -78,7 +83,7 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                             <li>
                                 <button data-modal-target="editModulo-{{$modulo->id}}" data-modal-toggle="editModulo-{{$modulo->id}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Editar</button>
-                                
+
                             </li>
                             <li>
                                 <form method="POST" action="{{ route('delete_modulo') }}" onsubmit="return confirm('Tem certeza que deseja excluir este módulo?')">
