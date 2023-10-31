@@ -96,3 +96,326 @@
     text-decoration: line-through;
 }
 
+.input-title {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 305px;
+    height: 40px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.list-title {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 30px;
+    word-wrap: break-word; 
+    max-width: 100%;
+}
+
+.button-set-title {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.button-set-title:hover {
+    opacity: 0.7;
+}
+
+.button-set-title:active {
+    background-color: #520E6C;
+    opacity: 1;
+}
+
+.container-lists {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.containertarefa {
+    background-color: #C1C1C1;
+    width: 30%;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-title, .input-task {
+    flex: 1;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.button-set-title, .button-add-task {
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+}
+
+.button-set-title:hover, .button-add-task:hover {
+    opacity: 0.7;
+}
+
+.button-set-title:active, .button-add-task:active {
+    background-color: #520E6C;
+    opacity: 1;
+}
+
+.list-title {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    word-wrap: break-word; 
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containertarefa {
+    background-color: #C1C1C1;
+    width: 30%;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.input-task,
+.input-task2,
+.input-task3 {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.button-add-task,
+.button-add-task2,
+.button-add-task3 {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+}
+
+.list-tasks,
+.list-tasks2,
+.list-tasks3 {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task,
+.task2,
+.task3 {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.task:hover #check,
+.task2:hover #check,
+.task3:hover #check {
+    opacity: 1;
+}
+
+.task:hover #trash,
+.task2:hover #trash,
+.task3:hover #trash {
+    opacity: 1;
+}
+
+.done,
+.done2,
+.done3 {
+    background-color: #8fac55;
+}
+
+.done .itemtarefa,
+.done2 .itemtarefa,
+.done3 .itemtarefa {
+    text-decoration: line-through;
+}
+
+.input-title,
+.input-title2,
+.input-title3 {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 305px;
+    height: 40px;
+    padding-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.list-title,
+.list-title2,
+.list-title3 {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
+    word-wrap: break-word; 
+    max-width: 100%;
+}
+
+.button-set-title,
+.button-set-title2,
+.button-set-title3 {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.button-set-title:hover,
+.button-set-title2:hover,
+.button-set-title3:hover {
+    opacity: 0.7;
+}
+
+.button-set-title:active,
+.button-set-title2:active,
+.button-set-title3:active {
+    background-color: #520E6C;
+    opacity: 1;
+}
+
+.container-lists {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.title-container,
+.title-container2,
+.title-container3 {
+    display: flex;
+    align-items: center;
+}
+
+.input-title,
+.input-title2,
+.input-title3,
+.input-task,
+.input-task2,
+.input-task3 {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.button-set-title,
+.button-set-title2,
+.button-set-title3,
+.button-add-task,
+.button-add-task2,
+.button-add-task3 {
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8E05C2;
+    color: #ffff;
+    font-size: 17px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+}
+
+.button-set-title:hover,
+.button-set-title2:hover,
+.button-set-title3:hover,
+.button-add-task:hover,
+.button-add-task2:hover,
+.button-add-task3:hover {
+    opacity: 0.7;
+}
+
+.button-set-title:active,
+.button-set-title2:active,
+.button-set-title3:active,
+.button-add-task:active,
+.button-add-task2:active,
+.button-add-task3:active {
+    background-color: #520E6C;
+    opacity: 1;
+}
+
+.list-title,
+.list-title2,
+.list-title3 {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    word-wrap: break-word; 
+    max-width: 100%;
+}
+
+
+#titlelistpage span{
+    color: #8E05C2;
+}
