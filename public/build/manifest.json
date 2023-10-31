@@ -1,21 +1,30 @@
 {
+  "__commonjsHelpers-28e086c5.js": {
+    "file": "assets/_commonjsHelpers-28e086c5.js"
+  },
   "node_modules/bootstrap/dist/css/bootstrap.min.css": {
     "file": "assets/bootstrap.min-7e4a3f64.css",
     "isEntry": true,
     "src": "node_modules/bootstrap/dist/css/bootstrap.min.css"
   },
   "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry": {
-    "file": "assets/bootstrap.bundle-8f21a554.js",
+    "file": "assets/bootstrap.bundle-9d83b40d.js",
+    "imports": [
+      "__commonjsHelpers-28e086c5.js"
+    ],
     "isEntry": true,
     "src": "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry"
   },
   "resources/css/app.css": {
-    "file": "assets/app-1c629824.css",
+    "file": "assets/app-abbbef7a.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-3e5e0598.js",
+    "file": "assets/app-7abfac4b.js",
+    "imports": [
+      "__commonjsHelpers-28e086c5.js"
+    ],
     "isEntry": true,
     "src": "resources/js/app.js"
   }
