@@ -15,15 +15,7 @@
                 </div>
             </div>
             <div class="px-6 py-6 lg:px-8">
-                <button type="button" id="botaoCopia-{{$modulo->id}}">
-                    <i class="fa-regular fa-copy fa-2xl" style="color: #000000; height:10px; width:100px;"></i>
-                </button>
-                <button type="button" id="salvarEdicaoBloco-{{ $bloco->id }}" data-bloco-id="{{ $bloco->id }}">
-                    Salvar Edição
-                </button>
-                <button type="button" id="deletarBloco-{{ $bloco->id }}" data-bloco-id="{{ $bloco->id }}">
-                    Deletar Bloco
-                </button>
+                
                 <!-- Exibir o código do bloco aqui -->
                 <div class="code-preview">
                     <textarea id="editCode-{{$bloco->id}}" name="codigo" placeholder="Coloque seu código aqui..." style="height: 100%;">{{ $bloco->codigo }}</textarea>
