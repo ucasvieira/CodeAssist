@@ -2,7 +2,7 @@
     <div class="relative w-full max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-menubg rounded-lg shadow">
-            <button type="button" class="absolute top-3 right-2.5  bg-transparent hover:bg-maincolor-100 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="authentication-modal">
+            <button type="button" class="absolute top-3 right-2.5  bg-transparent hover:bg-maincolor-100 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="createModuloModal">
                 <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
                 <span class="sr-only">Close modal</span>
             </button>
@@ -13,17 +13,14 @@
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Selecione a linguagem do Grupo</label>
                         <select name="linguagem" class=" rounded-lg">
-                            <option value="html">HTML</option>
+                            <option value="htmlmixed">HTML</option>
+                            <option value="css">CSS</option>
                             <option value="javascript">JavaScript</option>
                             <option value="python">Python</option>
-                            <option value="java">Java</option>
-                            <option value="csharp">C#</option>
                             <option value="php">PHP</option>
-                            <option value="cpp">C++</option>
-                            <option value="typescript">TypeScript</option>
-                            <option value="ruby">Ruby</option>
-                            <option value="swift">Swift</option>
-                            <option value="kotlin">Kotlin</option>
+                            <option value="sql">SQL</option>
+                            <option value="xml">XML</option>
+                            <option value="texto">Texto</option>
                         </select>
                     </div>
 

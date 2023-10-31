@@ -1,4 +1,3 @@
-@props(['login'])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -26,7 +25,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-darkfundo">
         <div class="grid">
         <div class="justify-self-end justify-item-center max-w-lg h-full pr-20">
-@if($login == true)
+@if($image == "login")
 
 <div class="textlogin">
         <h1 class="textlogina" style="font-size: 50px;"><strong>FAÇA SEU LOGIN</strong></h1>
@@ -36,14 +35,13 @@
             <img class="img-login" src="images/login.png" alt="programming"> 
         </div>
 
-@else
+@elseif($image == "cadastro")
         <div class="textcadastro">
          <h1 class="textcadastroa" style="font-size: 50px;"><strong>CADASTRE-SE!</strong></h1>
         </div>
         <div class="box-img-main">
             <img class="img-cadastro" src="images/register.png" alt="programming"> 
         </div>
-        
 @endif  
     
         

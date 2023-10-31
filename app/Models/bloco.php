@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class bloco extends Model
 {
-    use HasFactory;
+    protected $table = 'bloco';
+
+    protected $fillable = ['nome','idmodulo','codigo'];
+
 }

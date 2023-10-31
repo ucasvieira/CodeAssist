@@ -15,4 +15,9 @@ class ModuloBloco extends Model
     {
         return $this->belongsTo(User::class, 'iduser');
     }
+
+    public function blocos()
+    {
+        return $this->hasMany(Bloco::class, 'idmodulo', 'id');
+    }
 }

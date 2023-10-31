@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('bloco', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('idmodulo');
+            $table->unsignedBigInteger('idmodulo')->nullable();
             $table->string('nome');
-            $table->mediumText('codigo');
+            $table->mediumText('codigo')->nullable();
             $table->timestamps();
             $table->foreign('idmodulo')->references('id')->on('modulo_blocos');
         });

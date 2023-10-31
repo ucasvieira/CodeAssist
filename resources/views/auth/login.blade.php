@@ -1,4 +1,4 @@
-<x-guest-layout :login=true>
+<x-guest-layout image="login">
 <div class="preloader">
     <span></span>
 </div>

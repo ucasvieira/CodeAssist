@@ -1,4 +1,4 @@
-<x-guest-layout :login=false>
+<x-guest-layout image="cadastro">
 <div class="preloader">
     <span></span>
 </div>

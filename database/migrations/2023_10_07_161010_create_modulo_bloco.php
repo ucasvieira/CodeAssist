@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('modulo_blocos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('iduser');
-            $table->enum('linguagem',['java','php','html','python','javascript','csharp','cpp','typescript','ruby','swift','kotlin']);
+            $table->enum('linguagem',['sql','php','htmlmixed','python','javascript','xml','css','texto']);
             $table->timestamps();
             $table->foreign('iduser')->references('id')->on('users');
         });

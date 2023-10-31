@@ -10,7 +10,7 @@
     "src": "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry"
   },
   "resources/css/app.css": {
-    "file": "assets/app-9991322a.css",
+    "file": "assets/app-1c629824.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
