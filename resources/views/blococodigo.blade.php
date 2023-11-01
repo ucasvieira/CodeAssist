@@ -35,11 +35,10 @@
                                 }'?>
                             </script>
                         </button>
-                        @include('modal.editbloco', ['bloco' => $bloco])
+                        @include('modal.editbloco')
                     </div>
-
+                    
                     @endforeach
-
                 </div>
                 <style>
                     /* Estilizando a barra de rolagem vertical */
@@ -83,10 +82,9 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                             <li>
                                 <button data-modal-target="editModulo-{{$modulo->id}}" data-modal-toggle="editModulo-{{$modulo->id}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Editar</button>
-
                             </li>
                             <li>
-                                <form method="POST" action="{{ route('delete_modulo') }}" onsubmit="return confirm('Tem certeza que deseja excluir este módulo?')">
+                                <form method="POST" action="{{ route('delete_modulo',['id' => $modulo->id]) }}" onsubmit="return confirm('Tem certeza que deseja excluir este grupo?')">
                                     @method('DELETE')
                                     @csrf
                                     <input type="hidden" name="id_modulo" value="{{ $modulo->id }}">

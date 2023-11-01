@@ -130,10 +130,10 @@ class BlococodigoController extends Controller
 
     public function deletarBloco(Request $request)
     {
-        $idBloco = $request->input('id_bloco'); // Supondo que o ID do bloco seja passado via formulário ou parâmetro na rota.
+        $idbloco = $request->input('id_bloco');
 
         // Encontre o bloco para verificar a propriedade do usuário
-        $bloco = bloco::find($idBloco);
+        $bloco = bloco::find($idbloco);
 
         if (!$bloco) {
             return redirect()->back()->with('error', 'Bloco não encontrado.');

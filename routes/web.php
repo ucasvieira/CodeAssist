@@ -41,7 +41,9 @@ Route::get('/tarefa', function () {
 Route::get('/blococodigo', [blococodigoController::class, 'listarModulos'])->middleware(['auth', 'verified'])->name('blocodigo');
 Route::post('/criar-modulo', [blococodigoController::class, 'criarModulo'])->name('criar_modulo');
 Route::delete('/delete-modulo', [blococodigoController::class, 'deleteModulo'])->name('delete_modulo');
+Route::delete('/delete-bloco', [blococodigoController::class, 'deletarBloco'])->name('delete_bloco');
 Route::post('/criar-bloco', [blococodigoController::class, 'criarBloco'])->name('criar_bloco');
+Route::put('/edit-bloco/{id}', [blococodigoController::class, 'editarBloco'])->name('edit_bloco');
 Route::put('/editar-modulo/{id}', [blococodigoController::class, 'editarModulo'])->name('editar_modulo');
 
 

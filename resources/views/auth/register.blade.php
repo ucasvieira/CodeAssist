@@ -44,7 +44,7 @@
 
         <div class="container mx-auto justify-center mt-4">
         <x-primary-button >
-            {{ __('Entrar') }}
+            {{ __('Cadastrar') }}
         </x-primary-button>
         </div>
         <div class="flex items-center justify-top mt-4">
