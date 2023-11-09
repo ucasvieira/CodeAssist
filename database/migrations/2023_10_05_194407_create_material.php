@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 return new class extends Migration
 {
     /**
@@ -15,9 +16,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger("iduser");
             $table->string("nome");
-            $table->string("descricao");
-            $table->enum("tipo",['link','pdf','imagem','video']);
-            $table->string("url");
+            $table->enum("tipo",['pdf','doc','docx','txt','zip','jpg','jpeg','png','gif','mp4']);
+            $table->string("path");
             $table->timestamps();
             $table->foreign('iduser')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });

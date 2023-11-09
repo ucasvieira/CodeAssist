@@ -18,6 +18,6 @@ class ModuloBloco extends Model
 
     public function blocos()
     {
-        return $this->hasMany(Bloco::class, 'idmodulo', 'id');
+        return $this->hasMany(bloco::class, 'idmodulo', 'id');
     }
 }

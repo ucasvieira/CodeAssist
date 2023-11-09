@@ -11,7 +11,7 @@
         </button>
     </div>
     @else
-    <div class="grid grid-cols-2 justify-self-center md:grid-cols-3 gap-20 content-around  px-10 ">
+    <div class="grid grid-cols-2 justify-self-center md:grid-cols-3 gap-20 content-around px-10 ">
         <div class="box-content  w-[20vw] h-[21vh]">
             <div class="flex rounded-3xl bg-menubg justify-center items-center h-full w-full">
                 <button data-modal-target="createModuloModal" data-modal-toggle="createModuloModal" type="button">
@@ -22,11 +22,11 @@
         </div>
         @foreach ($modulos as $modulo)
         <div class="box-content w-[20vw] h-[21vh]">
-            <div class="flex rounded-3xl flex-col bg-menubg justify-center items-center h-full w-full">
+            <div class="flex rounded-3xl flex-col bg-menubg justify-center items-center h-full w-full min-w-fit">
                 <div class="gridtestedale grid grid-flow-row-dense grid-cols-2 h-2/3 w-[calc(100% - 12px)] overflow-y-auto overflow-x-hidden rounded-tl-3xl gap-x-1 gap-y-10 rounded-tr-3xl ">
 
                     @foreach ($modulo->blocos as $bloco)
-                    <div class="w-[19vw]  rounded-3xl h-20">
+                    <div class="w-[19vw]  rounded-3xl h-20 min-w-fit">
                         <button data-modal-target="previewBlocoModal-{{ $bloco->id }}" data-modal-toggle="previewBlocoModal-{{ $bloco->id }}" onclick="focusInput()" class="w-1/2 bg-maincolor-100 rounded h-20">
                             <p class="whitespace-pre-line truncate w-full text-white">{{ $bloco->nome }}</p>
                             <script>
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        @include('modal.editModulo')
+        @include('modal.editmodulo')
         @endforeach
     </div>
     @endif

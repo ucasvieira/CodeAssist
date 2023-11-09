@@ -12,7 +12,7 @@
                     @csrf
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Selecione a linguagem do Grupo</label>
-                        <select name="linguagem" class=" rounded-lg">
+                        <select name="linguagem" class="text-black rounded-lg">
                             <option value="htmlmixed">HTML</option>
                             <option value="css">CSS</option>
                             <option value="javascript">JavaScript</option>

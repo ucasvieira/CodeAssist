@@ -1,5 +1,5 @@
 <div class="navbar">
-  <nav class=" bg-darkfundo text-branco py-2 h-[10-vh]">
+  <nav class=" bg-darkfundo text-branco py-2 h-[16vh]">
     <div class="container mx-auto flex items-center justify-between flex-wrap">
       <a class="text-2xl font-bold" href="/">
         <img src="{{ asset('images/logo code assist final.png') }}" alt="Logo" width="200px" id="logo-final"/>

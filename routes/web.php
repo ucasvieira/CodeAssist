@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\blococodigoController;
+use App\Http\Controllers\materiaisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,7 +38,7 @@ Route::get('/pomodoro', function () {
 Route::get('/tarefa', function () {
     return view('tarefa');
 })->middleware(['auth', 'verified'])->name('tarefa');
-
+/* bloco de codigo*/
 Route::get('/blococodigo', [blococodigoController::class, 'listarModulos'])->middleware(['auth', 'verified'])->name('blocodigo');
 Route::post('/criar-modulo', [blococodigoController::class, 'criarModulo'])->name('criar_modulo');
 Route::delete('/delete-modulo', [blococodigoController::class, 'deleteModulo'])->name('delete_modulo');
@@ -47,6 +48,9 @@ Route::put('/edit-bloco/{id}', [blococodigoController::class, 'editarBloco'])->n
 Route::put('/editar-modulo/{id}', [blococodigoController::class, 'editarModulo'])->name('editar_modulo');
 
 
+Route::post('/adicionar-material', [materiaisController::class, 'criarMaterial'])->name('criar_material');
+Route::delete('/deletar-material/{id}', [materiaisController::class, 'deletarMaterial'])->name('deletar_material');
+Route::get('/baixar-arquivo/{id}', [materiaisController::class, 'baixarArquivo'])->name('baixar_arquivo');
 
 
 
@@ -54,8 +58,6 @@ Route::get('/flashcard', function () {
     return view('flashcard');
 })->middleware(['auth', 'verified'])->name('flashcard');
 
-Route::get('/materiais', function () {
-    return view('materiais');
-})->middleware(['auth', 'verified'])->name('materiais');
+Route::get('/materiais',[materiaisController::class, 'listarMateriais'])->middleware(['auth', 'verified'])->name('materiais');
 
 require __DIR__.'/auth.php';

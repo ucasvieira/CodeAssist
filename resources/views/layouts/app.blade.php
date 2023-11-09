@@ -11,11 +11,13 @@
     <link rel="shortcut icon" href="images/icontitle.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/pomodoro.css">
     <link rel="stylesheet" href="css/tarefas.css">
+    
+    
+    <!-- import das linguagens codemirror -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
     <link rel="stylesheet" href="{{asset('dracula.css')}}">
-    <!-- import das linguagens codemirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.4.0/mode/javascript/javascript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/htmlmixed/htmlmixed.min.js"></script>
@@ -35,17 +37,13 @@
 
 
 
-
-    <!-- and it's easy to individually load additional languages -->
-
-
     @vite(['resources/css/app.css', 'resources/js/app.js' ])
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
     </style>
 </head>
 
-<body class="antialiased h-screen  bg-darkfundo scrollbar-thin scrollbar-rounded-lg hover:scrollbar-thumb-maincolor-300 scrollbar-thumb-menubg scrollbar-track-transparent">
+<body class="antialiased h-screen  bg-darkfundo text-white scrollbar-thin scrollbar-rounded-lg hover:scrollbar-thumb-maincolor-300 scrollbar-thumb-menubg scrollbar-track-transparent">
 
     <script>
         $(window).on("load", function() {
@@ -55,7 +53,7 @@
 
     @include('layouts.navigation')
     <!--Conteúdo da página-->
-    <div>
+    <div class="h-[5vh]">
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
             <i class="fa-solid fa-moon" style="color: #ffffff;"></i>
