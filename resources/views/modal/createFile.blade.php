@@ -9,7 +9,7 @@
                         <label for="nome">Digite o nome do material:</label>
                         <input type="text" id="nome" name="nome" class="bg-white border-2 w-full border-maincolor-100 text-black rounded-lg focus:ring-maincolor-100 focus:border-maincolor-100   mb-2.5" required>
                     </div>
-                    <label for="arquivo"></label>
+                    <label for="arquivo">Máximo suportado:50mb</label>
                     <input id="arquivo" name="arquivo" type="file" class="bg-maincolor-100 w-full" required />
                     <button class="bg-maincolor-100 w-[10vw] min-w-max h-10 rounded-2xl mt-3" type="submit">Salvar arquivo</button>
                 </form>
