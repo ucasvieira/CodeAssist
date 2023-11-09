@@ -4,9 +4,9 @@
     </div>
     @if ($semModulos)
     <div class="flex flex-col w-screen h-[86vh] justify-center items-center pb-12">
-        <h1 class="text-white pb-3">Você não possui nenhum grupo de blocos criado.</h1>
+        <h1 class="text-white pb-3" id="textnobloco">Você não possui nenhum grupo de blocos criado.</h1>
 
-        <button data-modal-target="createModuloModal" data-modal-toggle="createModuloModal" type="button" class="bg-maincolor-100 rounded py-0.5 px-10 text-white">
+        <button data-modal-target="createModuloModal" data-modal-toggle="createModuloModal" type="button" id="nobloco">
             Criar
         </button>
     </div>
@@ -88,7 +88,7 @@
                                     @method('DELETE')
                                     @csrf
                                     <input type="hidden" name="id_modulo" value="{{ $modulo->id }}">
-                                    <button type="submit" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <button type="submit" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" id="deletebloco">
                                         Excluir
                                     </button>
                                 </form>

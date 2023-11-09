@@ -11,9 +11,13 @@
     <link rel="shortcut icon" href="images/icontitle.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/pomodoro.css">
     <link rel="stylesheet" href="css/tarefas.css">
+<<<<<<< HEAD
     
     
     <!-- import das linguagens codemirror -->
+=======
+    <link rel="stylesheet" href="css/blococodigo.css">
+>>>>>>> 1a8202ffdfb43390fb25e026729afb8aab0dabd3
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
