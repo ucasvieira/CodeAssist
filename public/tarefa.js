@@ -17,6 +17,7 @@ buttonSetTitle.addEventListener('click', function() {
     listData.title = inputTitle.value || "Título";
     titleContainer.textContent = listData.title;
     localStorage.setItem('tituloLista', JSON.stringify(listData.title));
+    inputTitle.value = '';
 });
 
 function addNewTask() {
@@ -109,6 +110,7 @@ buttonSetTitle2.addEventListener('click', function() {
     listData2.title = inputTitle2.value || "Título";
     titleContainer2.textContent = listData2.title;
     localStorage.setItem('tituloLista2', JSON.stringify(listData2.title));
+    inputTitle2.value = '';
 });
 
 function addNewTask2() {
@@ -203,6 +205,7 @@ buttonSetTitle3.addEventListener('click', function() {
     listData3.title = inputTitle3.value || "Título";
     titleContainer3.textContent = listData3.title;
     localStorage.setItem('tituloLista3', JSON.stringify(listData3.title));
+    inputTitle3.value = '';
 });
 
 function addNewTask3() {
@@ -276,3 +279,44 @@ inputTask3.addEventListener('input', function() {
 
 reloadTasks3();
 
+// Permitindo apenas letras e números na adição de novas tarefas
+
+document.getElementById("list1").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+document.getElementById("list2").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+document.getElementById("list3").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+// Permitindo apenas letras e números no título
+
+document.getElementById("title1").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+document.getElementById("title2").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+document.getElementById("title3").onkeypress = function(e) {
+    var chr = String.fromCharCode(e.which);
+    if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+        return false;
+};
+
+  

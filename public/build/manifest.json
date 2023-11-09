@@ -16,7 +16,7 @@
     "src": "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry"
   },
   "resources/css/app.css": {
-    "file": "assets/app-abbbef7a.css",
+    "file": "assets/app-fac91b41.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },

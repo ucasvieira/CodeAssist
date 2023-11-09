@@ -51,7 +51,7 @@ gerencie o seu tempo.<strong></h1>
     <section class="fourth-section">
         <div id="hidden">
             <h1 class="fontum" id="textlist"><strong>Encontre a clareza mental que você tanto busca. <br>
-Foque no que é importânte anotando tudo o que 
+Foque no que é importante anotando tudo o que 
 você precisa fazer!<strong></h1>
             <a class="btn-action dark-text-hover" href="{{ url('/tarefa') }}">Lista de Tarefas</a>
         </div>

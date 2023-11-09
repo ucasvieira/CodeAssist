@@ -1,0 +1,18 @@
+#nobloco{
+    background-color: #8E05C2;
+    color: white;
+    transition: background-color 0.4s, border-color 0.4s, color 0.4s;
+    padding: 0.4em 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+#nobloco:hover{
+    background-color: transparent;
+    border: 2px solid #8E05C2;
+  }
+
+#textnobloco{
+    font-size: 20px;
+}
