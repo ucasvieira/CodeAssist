@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Input\Input;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Response;
+use App\Models\links;
 
 class materiaisController extends Controller
 {
+    /*arquivos*/
     public function criarMaterial(Request $request)
     {
         $request->validate([
@@ -32,7 +34,7 @@ class materiaisController extends Controller
 
         // Cria um novo registro na tabela 'material'
         $material = new material([
-            'iduser' => $user->id,
+            'iduser' => Auth::id(),
             'nome' => $nomeArquivo,
             'tipo' => $tipoArquivo,
             'path' => $caminhoArquivo,
@@ -45,9 +47,11 @@ class materiaisController extends Controller
     public function listarMateriais()
     {
         $user = Auth::user();
-        $materiais = material::where('iduser', $user->id)->get();
+        $materiais = material::where('iduser', Auth::id())->get();
+        $links = links::where('iduser',Auth::id())->get();
+        $modulos = ModuloBloco::where('iduser', Auth::id())->with('blocos')->get();
 
-        return view('materiais')->with('materiais', $materiais);
+        return view('materiais')->with('materiais', $materiais)->with('links', $links)->with('modulos', $modulos);
     }
 
     public function deletarMaterial($id)
@@ -66,5 +70,40 @@ class materiaisController extends Controller
         $pathToFile = public_path('storage/' . $material->path);
 
         return Response::download($pathToFile, $material->nome . '.' . $material->tipo);
+    }
+
+    /*links */
+
+    public function criarLink(Request $request){
+        $request->validate([
+            'nome' => 'required|string',
+            'url' => 'required|string',
+        ]);
+
+        $user = Auth::user(); // Obtém o usuário autenticado
+        $nomelink = $request->input('nome');
+        $url = $request->input('url');
+
+
+        // Cria um novo registro na tabela 'material'
+        $link = new links([
+            'iduser' => Auth::id(),
+            'nome' => $nomelink,
+            'url' => $url,
+            
+        ]);
+
+        $link->save();
+
+        return redirect()->back()->with('success', 'Link criado com sucesso!');
+    }
+    public function deletarLink($id)
+    {
+        $link = links::findOrFail($id);
+        
+
+        $link->delete();
+
+        return redirect()->back()->with('success', 'Material deletado com sucesso!');
     }
 }

@@ -47,10 +47,15 @@ Route::post('/criar-bloco', [blococodigoController::class, 'criarBloco'])->name(
 Route::put('/edit-bloco/{id}', [blococodigoController::class, 'editarBloco'])->name('edit_bloco');
 Route::put('/editar-modulo/{id}', [blococodigoController::class, 'editarModulo'])->name('editar_modulo');
 
-
+/*Arquivos */
 Route::post('/adicionar-material', [materiaisController::class, 'criarMaterial'])->name('criar_material');
 Route::delete('/deletar-material/{id}', [materiaisController::class, 'deletarMaterial'])->name('deletar_material');
 Route::get('/baixar-arquivo/{id}', [materiaisController::class, 'baixarArquivo'])->name('baixar_arquivo');
+
+/*links */
+Route::post('/adicionar-link', [materiaisController::class, 'criarLink'])->name('criar_link');
+Route::delete('/deletar-link/{id}', [materiaisController::class, 'deletarlink'])->name('deletar_link');
+
 
 
 

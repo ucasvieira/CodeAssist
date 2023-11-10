@@ -25,7 +25,7 @@
                 <form class="space-y-6" action="{{route('criar_bloco')}}" method="post">
                     @csrf
                     <div class="flex flex-row align-middle">
-                        <input type="text" name="nome" class="bg-menubg border border-maincolor-100 text-[#838383] text-5xl rounded-lg focus:ring-menubg focus:border-menubg block w-2/3   p-2.5 " placeholder="Digite um título ou uma breve descrição" required>
+                        <input type="text" id="userInput" name="nome" class="bloconame bg-menubg border border-maincolor-100 text-[#838383] text-5xl rounded-lg focus:ring-menubg focus:border-menubg block w-2/3   p-2.5 " placeholder="Digite um título ou uma breve descrição" required>
                         <button type="submit" class="w-1/6 ml-10  bg-maincolor-100 hover:bg-maincolor-200 focus:ring-4 focus:outline-none focus:ring-maincolor-300 font-medium rounded-lg text-sm px-4 py-2 text-white text-center ">Criar Bloco</button>
                         <button type="button" id="botaoCopia-{{$modulo->id}}">
                             <i class="fa-regular fa-copy fa-2xl" style="color: #000000; height:10px; width:100px;"></i>
@@ -62,8 +62,15 @@
     </div>
 </div>
 <script>
+    
     <?php
-    echo 'var myTextarea = document.getElementById("myTextarea-', $modulo->id, '");
+    echo '
+    document.getElementById("userInput").addEventListener("input", function(event) {
+        let userInput = event.target.value;
+        let cleanInput = userInput.replace(/<|>/g, "");
+        event.target.value = cleanInput; 
+    });
+    var myTextarea = document.getElementById("myTextarea-', $modulo->id, '");
     // Selecione o botão e a textarea
     var botaoCopiar = document.getElementById("botaoCopia-',$modulo->id,'");
         var editor',$modulo->id,' = CodeMirror.fromTextArea(myTextarea, {

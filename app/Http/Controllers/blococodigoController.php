@@ -87,6 +87,7 @@ class BlococodigoController extends Controller
             ]);
 
             $bloco = new bloco([
+                'iduser' => Auth::id(),
                 'nome' => $request->input('nome'),
                 'idmodulo' => $request->input('idmodulo'),
                 'codigo' => $request->input('codigo'),

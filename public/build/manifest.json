@@ -16,12 +16,12 @@
     "src": "node_modules/bootstrap/dist/js/bootstrap.bundle.js?commonjs-entry"
   },
   "resources/css/app.css": {
-    "file": "assets/app-ea472801.css",
+    "file": "assets/app-c41f5ee6.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-7abfac4b.js",
+    "file": "assets/app-e7c4979f.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],

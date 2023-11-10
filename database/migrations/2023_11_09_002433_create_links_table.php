@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('iduser');
             $table->string('nome');
             $table->string('URL');
             $table->timestamps();
+            $table->foreign('iduser')->references('id')->on('users');
         });
     }
 

@@ -9,6 +9,10 @@ class bloco extends Model
 {
     protected $table = 'bloco';
 
-    protected $fillable = ['nome','idmodulo','codigo'];
+    protected $fillable = ['nome','idmodulo','codigo','iduser'];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'iduser');
+    }
 }

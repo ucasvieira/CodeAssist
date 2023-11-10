@@ -11,9 +11,8 @@
     <link rel="shortcut icon" href="images/icontitle.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/pomodoro.css">
     <link rel="stylesheet" href="css/tarefas.css">
-</head>
     
-    
+
     <!-- import das linguagens codemirror -->
 
     <link rel="stylesheet" href="css/blococodigo.css">
@@ -33,6 +32,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/scroll/simplescrollbars.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/display/autorefresh.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/clike/clike.min.js"></script>
+
+
 
     <title>Code Assist</title>
 

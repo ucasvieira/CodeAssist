@@ -30,14 +30,14 @@
                         <button data-modal-target="previewBlocoModal-{{ $bloco->id }}" data-modal-toggle="previewBlocoModal-{{ $bloco->id }}" onclick="focusInput()" class="w-1/2 bg-maincolor-100 rounded h-20">
                             <p class="whitespace-pre-line truncate w-full text-white">{{ $bloco->nome }}</p>
                             <script>
-                               <?echo' function focusInput() {
-                                    document.getElementById("editCode-',$bloco->id,'").focus();
-                                }'?>
+                                <? echo ' function focusInput() {
+                                    document.getElementById("editCode-', $bloco->id, '").focus();
+                                }' ?>
                             </script>
                         </button>
                         @include('modal.editbloco')
                     </div>
-                    
+
                     @endforeach
                 </div>
                 <style>
@@ -112,4 +112,11 @@
     </div>
     @endif
     @include('modal.createmodulo')
+    <script>
+        document.getElementsByClassName("bloconame").onkeypress = function(e) {
+            var chr = String.fromCharCode(e.which);
+            if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+                return false;
+        };
+    </script>
 </x-app-layout>
