@@ -80,13 +80,13 @@
                 <div class="w-1/2">
                     <p class="truncate" editable>{{$link->nome}}</p>
                 </div>
-                <div class=" w-5/12">
+                <div class=" w-[35%]">
                     <a href="{{$link->URL}} " target="_blank" rel="noopener noreferrer">
                         <p class="truncate hover:text-blue-600 hover:underline" editable>{{$link->URL}}</p>
                     </a>
                 </div>
-                <div class="1/12 justify-self-end pl-10">
-                    <button data-modal-target="deleteLink{{$link->id}}" data-modal-toggle="deleteLink{{$link->id}}" class=" bg-red-700 hover:bg-red-600 bottom-14 right-14 p-4 py-2 px-4 rounded-xl">
+                <div class=" justify-self-end pl-10">
+                    <button data-modal-target="deleteLink{{$link->id}}" data-modal-toggle="deleteLink{{$link->id}}" class=" bg-red-700 hover:bg-red-600 p-4 py-2 px-4 rounded-xl">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
@@ -100,7 +100,7 @@
             @foreach($modulo->blocos as $bloco)
             <div class="p-4 md:w-1/3">
                 <a data-modal-target="viewbloco{{$bloco->id}}" data-modal-toggle="viewbloco{{$bloco->id}}">
-                    <div class="h-[40vh] border rounded-lg ">
+                    <div class="h-[40vh] border-2 border-maincolor-100 bg-menubg rounded-lg ">
                         <div class="p-6">
                             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"></h2>
                             <h1 class="text-white mb-3">{{$bloco->nome}}</h1>
@@ -109,12 +109,11 @@
                                 
 
                                 .hljs {
-                                    background-color: #0F0F0F;
+                                    background-color: #272727;
                                     /* Cor de fundo */
-                                    padding: 1em;
+                                    
                                     /* Espaçamento interno */
-                                    border-radius: 5px;
-                                    /* Borda arredondada */
+                                    
                                 }
                             </style>
                         </div>
@@ -204,6 +203,48 @@
         document.getElementById('btnBlocos').addEventListener('click', () => toggleTab('blocos'));
 
         document.addEventListener('DOMContentLoaded', showActiveTab);
+        function ocultarBotoesCriacao() {
+            document.querySelector('[data-modal-target="createFile"]').classList.add('hidden');
+            document.querySelector('[data-modal-target="createLink"]').classList.add('hidden');
+        }
+
+        // Função para mostrar o botão de criação de arquivo e ocultar o de link
+        function mostrarBotaoArquivos() {
+            document.querySelector('[data-modal-target="createFile"]').classList.remove('hidden');
+            document.querySelector('[data-modal-target="createLink"]').classList.add('hidden');
+        }
+
+        // Função para mostrar o botão de criação de link e ocultar o de arquivo
+        function mostrarBotaoLinks() {
+            document.querySelector('[data-modal-target="createLink"]').classList.remove('hidden');
+            document.querySelector('[data-modal-target="createFile"]').classList.add('hidden');
+        }
+
+        // Verificar qual aba está ativa ao carregar a página
+        window.addEventListener('load', function() {
+            const botaoArquivosAtivo = document.getElementById('btnArquivos').classList.contains('active');
+            const botaoLinksAtivo = document.getElementById('btnLinks').classList.contains('active');
+
+            if (botaoArquivosAtivo) {
+                mostrarBotaoArquivos();
+            } else if (botaoLinksAtivo) {
+                mostrarBotaoLinks();
+            } else {
+                ocultarBotoesCriacao();
+            }
+        });
+
+        // Adicionar manipuladores de eventos aos botões de abas
+        document.getElementById('btnArquivos').addEventListener('click', function() {
+            mostrarBotaoArquivos();
+        });
+        document.getElementById('btnLinks').addEventListener('click', function() {
+            mostrarBotaoLinks();
+        });
+        // Adicionar manipulador para a aba de blocos de código
+        document.getElementById('btnBlocos').addEventListener('click', function() {
+            ocultarBotoesCriacao();
+        });
     </script>
 
 </x-app-layout>

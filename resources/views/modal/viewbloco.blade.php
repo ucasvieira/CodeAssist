@@ -41,6 +41,7 @@
         styleActiveSelected: true,
         theme: "dracula",
         scrollbarStyle: "overlay",
+        readOnly: true,
         mode: "', $modulo->linguagem, '"
     });
     
